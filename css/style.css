@@ -1,0 +1,659 @@
+
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'Lato';
+	src: url('../fonts/Lato-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* Font Inter */
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'FELIXTI';
+	src: url('../fonts/FELIXTI.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+  --primary-white: #FFFEF2;
+  --secondary-black: #243230;
+  --blue-border:#0EE3C4;
+  --paragraph-text:#636363;
+  --white-yellow:#F0E5D6;
+  --black :#000000;
+}
+
+* {
+  transition: all .4s ease;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #161824;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    background: #FFF ;
+    overflow-x: hidden;
+}
+
+a, a:link, a:visited {
+    outline: none;
+	text-decoration: none;	
+	-moz-tap-highlight-color: transparent; 
+	-webkit-tap-highlight-color: transparent; 
+}
+
+img {
+	border: none;
+	margin: 0px;
+	max-width: 100%;
+}
+
+
+h1 {
+	font-family: 'Lato';
+    font-weight: bold;
+	font-size: 28px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+h2 {
+	font-family: 'Lato';
+	font-weight: normal;
+	font-size: 24px;
+	margin: 0px;
+	padding: 0px;
+}
+
+h3, h4, h5, h6 {
+	font-family: 'Lato';
+    font-weight: normal;
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;	
+}
+
+form, input, select, textarea, p {
+	margin: 0px;
+	padding: 0;
+}
+
+textarea {
+	resize: none;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+}
+
+input::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure,  
+footer, header, hgroup, menu, nav, section, time {  
+	display: block; 
+} 
+
+.bg-white-primary {
+  background: var(--primary-white);
+}
+
+.bg-green {
+  background: var(--secondary-black);
+}
+
+.text-yellow-white {
+  color: var(--white-yellow) !important;;
+}
+
+.title {
+  font-family: 'Felix Titling';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 46.78px;
+  letter-spacing: 0.1em;
+  color: var(--secondary-black);
+}
+
+.subtitle {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.6em;
+  color: var(--white-yellow);
+}
+
+.banner-bg {
+  background: url(../images/banner.svg)no-repeat center center, linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background-blend-mode: overlay; 
+  background-size: cover;
+  width: 100%;
+  height:865px;
+}
+
+.logo a {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 72px;
+  color: #fff;
+  line-height: 87.14px;
+}
+
+.nav-link {
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  letter-spacing: 0.1em;
+  color:var(--primary-white)!important;
+
+}
+
+.nav-link.active, .nav-link:hover {
+  border-bottom: 2px solid var(--blue-border);
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.border-white {
+  border-bottom: 1px solid var(--primary-white);
+  width: 100%;
+  position: relative;
+  left: 0;
+  opacity: 0.5;
+}
+
+.text-carousel-title {
+  font-family: 'Felix Titling';
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56.13px;
+  letter-spacing: 0.1em;
+  color: var(--primary-white);
+}
+
+.black-button {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.2em;
+  color: var(--primary-white);
+  background: var(--secondary-black);
+  border: 1px solid var(--secondary-black);
+  max-width: 190px;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  margin: 30px auto;
+  transition: all 0.3s ease;
+}
+
+.black-button:hover {
+  border: 1px solid var(--primary-white);
+  
+}
+
+.about-us .black-button:hover {
+  border: 1px solid var(--secondary-black);
+  color: var(--secondary-black);
+  background: var(--primary-white);
+}
+
+.text-carousel-wrap {
+  max-width: 50%;
+  width: 100%;
+  margin: 210px auto 0;
+}
+
+#textCarousel .carousel-indicators {
+  bottom: -91px;
+}
+
+#textCarousel .carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+}
+
+#textCarousel .carousel .carousel-indicators button {
+   width: 11px;
+   height: 11px;
+   border-radius: 100%;
+ }
+
+.about-us {
+  padding: 70px 0 150px;
+}
+
+.about-image-1 {
+  margin-top: 360px;
+}
+
+.about-image-2 {
+  margin-left: -145px;
+  margin-bottom: 100px;
+}
+
+.description {
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--paragraph-text);
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.promotions {
+  padding: 50px 0 40px;
+}
+
+.promotions .card-body {
+    max-width: 330px;
+    width: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    margin-left: 16px;
+    margin-top: -35px;
+    border-radius: 5px;
+}
+
+.promotions .card-title {
+  font-family: 'Felix Titling';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.07px;
+  letter-spacing: 0.1em;
+  text-align: left;
+
+}
+
+.promotions .card:hover .card-text-inner-wrap {
+  display: block;
+}
+
+.promotions .card .card-text-inner-wrap {
+  display: none;
+  transition: all 0.4s ease;
+}
+
+.promotions .card:hover .card-body {
+  margin-top: -135px;
+}
+
+.promotions .card-body {
+  padding: 20px 15px 15px;
+}
+
+.card-text{
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: var(--paragraph-text)!important;
+}
+.promotions .card-text-inner-wrap .black-button {
+  margin: 20px 0 15px;
+}
+
+#cardCarousel .carousel-control-next-icon, .carousel-control-prev-icon {
+  background: none;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+}
+
+#cardCarousel .carousel-control-next-icon {
+  right: -50px;
+}
+
+#cardCarousel .carousel-control-prev-icon {
+  left: -50px;
+}
+
+#cardCarousel .carousel-control-next, #cardCarousel .carousel-control-prev {
+  opacity: 1;
+}
+
+.wave-img-top {
+  top: 57px;
+  right: 0;
+}
+
+.wave-img-bottom {
+  bottom: 2px;
+  left: -54px;
+}
+
+.view-btn {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: var(--secondary-black);
+  background: #FFFFFF;
+  padding: 10px 0;
+  max-width: 185px;
+  width: 100%;
+
+}
+
+.events {
+  padding: 40px 0;
+}
+
+.events .card {
+  border-radius: 5px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 3px 4px 30px 0px #00000033;
+
+}
+
+.events .card-bottom {
+  background: var(--secondary-black);
+  padding: 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.events .subtitle {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.6em;
+  color: var(--black);
+}
+
+.events .card-title {
+  font-family: 'Felix Titling';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.07px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: var(--secondary-black)!important;
+
+}
+
+.events .card-bottom-text {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  color: var(--primary-white);
+  max-width: 235px;
+  width: 100%;
+}
+
+.events .card-bottom img {
+  max-width: 50px;
+  width: 100%;
+}
+
+.gallery {
+  padding: 50px 0 70px;
+}
+
+.gallery .nav-tabs .nav-link.active {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--blue-border);
+}
+
+.gallery .nav-tabs .nav-link{
+  border: none;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+.gallery .nav-tabs  {
+  border: none;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.gallery .nav-tabs .nav-link:hover {
+  border-bottom: 1px solid var(--blue-border);
+}
+
+#galleryTabContent {
+  position: relative;
+  z-index: 0;
+}
+
+.gallery-wave-curve-1 {
+  bottom: 37%;
+  left: -124px;
+  z-index: -1;
+}
+
+.gallery-wave-curve-2 {
+  right: -85px;
+  top: 25%;
+  z-index: -1;
+}
+
+.footer {
+  padding: 45px 0 25px;
+}
+
+.footer .logo a {
+  color:var(--secondary-black);
+  font-weight: 400;
+}
+
+.footer .footer-aboutus { 
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: var(--secondary-black);
+  max-width: 570px;
+  width: 100%;
+
+}
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .social-media ul li {
+  list-style: none;
+  background: var(--secondary-black);
+  border-radius: 30px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .subtitle {
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  color: var(--secondary-black);
+
+}
+
+.footer .address{
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: var(--secondary-black);
+}
+
+.signup-description {
+  font-family: 'Lato';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+
+.news-letter input {
+  background: #F2F1E3;
+  height: 57px;
+  border-radius: 5px;
+}
+
+.news-letter .black-button {
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0;
+  height: 57px;
+
+}
+
+.footer-bottom {
+  border-top: 1px solid #B6B6B6;
+  padding-top: 20px;
+}
+
+.footer-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 480px;
+  width: 100%;
+
+}
+
+.footer-bottom ul li {
+  list-style: none;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  color: var(--secondary-black);
+  text-transform: uppercase;
+}
+
+
+.footer-bottom p{
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  letter-spacing: 0.2em;
+  color:var(--secondary-black);
+}
+
+.reserve-table-sticky {
+  position: absolute;
+  right: -70px;
+  transform: rotate(-90deg);
+  top: 50%;
+}
+
+.reserve-table-sticky .black-button {
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo a {
+    font-size: 55px;
+  }
+
+  .banner-bg .logo {
+    padding: 10px 0!important;
+  } 
+  
+  .reserve-table-sticky {
+    bottom: 0;
+    top: unset;
+  }
+
+  .text-carousel-title {
+    font-size: 31px;
+    line-height: 37px;
+  }
+
+  .text-carousel-wrap {
+    max-width: 100%;
+    width: 100%;
+    margin: 54px auto 0;
+    height: 200px!important;
+  }
+}
